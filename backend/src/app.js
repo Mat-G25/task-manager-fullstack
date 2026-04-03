@@ -31,9 +31,11 @@ app.get('/', (req, res) => {
   })
 })
 
-const PORT = process.env.PORT || 3001
+// No final do arquivo src/app.js
+
+const PORT = process.env.PORT || 3001;   // Railway usa a variável PORT
 
 app.listen(PORT, () => {
-  console.log(`🚀 Servidor rodando na porta ${PORT}`)
-  console.log(`📍 Teste: http://localhost:${PORT}`)
-})
+  console.log(`🚀 Servidor rodando na porta ${PORT}`);
+  console.log(`📍 URL: https://task-manager-fullstack-production-636d.up.railway.app`);
+});
