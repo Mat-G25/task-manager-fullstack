@@ -42,15 +42,18 @@ exports.create = async (req, res) => {
 exports.update = async (req, res) => {
   const { title, description, status, due_date } = req.body
 
+  // Converte string vazia para null
+  const dueDateValue = due_date && due_date !== '' ? due_date : null
+
   try {
     const [result] = await db.query(
       `UPDATE tasks 
        SET title = COALESCE(?, title),
            description = COALESCE(?, description),
            status = COALESCE(?, status),
-           due_date = COALESCE(?, due_date)
+           due_date = ?
        WHERE id = ? AND user_id = ?`,
-      [title, description, status, due_date, req.params.id, req.userId],
+      [title, description, status, dueDateValue, req.params.id, req.userId],
     )
 
     if (result.affectedRows === 0) {
