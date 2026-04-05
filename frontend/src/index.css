@@ -796,3 +796,13 @@ html.dark .form-group label { color: #c0c0c0; }
   background: #334155;
   border-color: #64748b;
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 1;
+  filter: invert(0);
+}
+
+html.dark input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}

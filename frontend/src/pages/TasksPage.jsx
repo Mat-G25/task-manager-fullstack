@@ -124,16 +124,15 @@ export default function TasksPage() {
     }
   }
 
-  function startEdit(task) {
-    setEditId(task.id)
-    setEditForm({
-      title: task.title,
-      description: task.description || '',
-      status: task.status,
-      due_date: task.due_date || '',
-    })
-  }
-
+function startEdit(task) {
+  setEditId(task.id)
+  setEditForm({
+    title: task.title,
+    description: task.description || '',
+    status: task.status,
+    due_date: task.due_date ? task.due_date.split('T')[0] : '',
+  })
+}
   async function handleUpdate(id) {
     try {
       await api.put(`/tasks/${id}`, editForm)
