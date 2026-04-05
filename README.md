@@ -1,6 +1,7 @@
 # Task Manager
 
 Sistema full-stack de gerenciamento de tarefas com autenticação JWT, desenvolvido para demonstrar boas práticas de desenvolvimento web.
+**[Site funcionando](https://task-manager-fullstack-iota.vercel.app)**
 
 <img width="1904" height="958" alt="image" src="https://github.com/user-attachments/assets/bc05cc4a-87cf-4ea1-ba01-815dfe07c9c4" />
 
@@ -46,7 +47,7 @@ Sistema full-stack de gerenciamento de tarefas com autenticação JWT, desenvolv
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/task-manager.git
+git clone https://github.com/Mat-G25/task-manager-fullstack.git
 cd task-manager
 ```
 
@@ -97,6 +98,8 @@ Acesse: [http://localhost:5173](http://localhost:5173)
 ### Lista de Tarefas
 <img width="1906" height="656" alt="image" src="https://github.com/user-attachments/assets/f8a78851-57e9-4258-ad4e-17ff10898cd1" />
 
+## Arquitetura
+Frontend (Vercel) → API REST (Railway) → MySQL (Railway)
 
 ---
 
