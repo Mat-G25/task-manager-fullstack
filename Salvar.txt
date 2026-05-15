@@ -21,3 +21,6 @@ sys
 CA:
 
 <CA_PATH>
+
+
+JWT_SECRET 4fc5e2a885e9b482dcd48c9d764e6868
